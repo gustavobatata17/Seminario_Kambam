@@ -1,0 +1,150 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kambam e Juaguar</title>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav id="nav">
+        <div class="navTop">
+            <img class="img_logo" src="./img/logo_jaguar.png" alt="">
+
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="./img/search.png" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+
+            <img class="img_logo" src="img/kambam_png.png" alt="">
+
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">INICIO</h3>
+            <h3 class="menuItem">JUAGUAR</h3>
+            <h3 class="menuItem">KAMBAM</h3>
+            <h3 class="menuItem">PENSAMENTO LEAN</h3>
+
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img style="border-radius: 100%;" src="./img/Participantes.png" alt="" class="sliderImg">
+
+                <div class="sliderBg">
+
+                </div>
+                <h1 class="sliderTitle"> QUEM </br> SOMOS </br> NÓS?</h1>
+                <h2 class="sliderPrice"> 1 e 18 </h2>
+
+            </div>
+
+            <div class="sliderItem">
+                <img src="./img/Juagar.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">THE</br> JUAGUAR </br></h1>
+
+
+            </div>
+
+            <div class="sliderItem">
+                <img src="./img/blazer.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">KAMBAM</h1>
+
+
+            </div>
+            <div class="sliderItem">
+                <img src="./img/crater.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">PENSAMENTO</br>LEAN</h1>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="./img/relogio.png" alt="" class="featureIcon">
+            <span class="featureTitle">Redução de Tempo</span>
+            <span class="featureDesc">Menor tempo de espera e colocação no mercado</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/grafico.png" alt="">
+            <span class="featureTitle">Aumento de Vendas</span>
+            <span class="featureDesc">Incremento nas vendas e satisfação do cliente</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/lampada.png" alt="">
+            <span class="featureTitle">Inovação</span>
+            <span class="featureDesc">Aumento da inovação e redução de custos</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/estrela.png" alt="">
+            <span class="featureTitle">Melhoria de Qualidade</span>
+            <span class="featureDesc">Redução de defeitos e aumento de produtividade</span>
+        </div>
+    </div>
+
+    <div class="kanban-board">
+        <div class="column" id="todo">
+            <h2>To Do</h2>
+            <div class="item-container"></div>
+            <button onclick="addItem('todo')">Adicionar Item</button>
+        </div>
+        <div class="column" id="in-progress">
+            <h2>In Progress</h2>
+            <div class="item-container"></div>
+            <button onclick="addItem('in-progress')">Adicionar Item</button>
+        </div>
+        <div class="column" id="done">
+            <h2>Done</h2>
+            <div class="item-container"></div>
+            <button onclick="addItem('done')">Adicionar Item</button>
+        </div>
+    </div>
+ <h1 style="text-align: center;">Referências</h1>
+    <div class="referencias">
+   
+    <div class="reference-card">
+        <div class="reference-header">
+          <h3>Documento de pesquisa</h3>
+          <button class="toggle-info"><a target="_blank" href="https://docs.google.com/document/d/1o_4kbdHeDSfvwrlzOmbiTKUxjFFsaSH2xGCQj3Os8YI/edit?usp=sharing">+</a></button>
+        </div>
+        
+      </div>
+      
+
+</div>
+    <footer>
+        <h3>Desenvolvido por Gustavo José Costa Gregenski e Adrian Felipe Cavalli </h3>
+        <div>
+            <a target="_blank" href="https://www.linkedin.com/in/gustavo-jos%C3%A9-costa-gregenski-7aa8b7302/">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a target="_blank" href="https://github.com/gustavobatata17">
+                <i class="bi bi-github"></i>
+            </a>
+
+            <a target="_blank" href="https://wa.me/554199100397">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>
