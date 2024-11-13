@@ -7,10 +7,12 @@ body {
   padding: 0;
   margin: 0;
 }
-.img_logo{
+
+.img_logo {
   width: 11%;
   height: 11%;
 }
+
 nav {
   background-color: #111;
   color: rgb(234, 205, 60);
@@ -34,6 +36,7 @@ nav {
   border: none;
   background-color: transparent;
 }
+
 .reference-card {
   width: 300px;
   border: 2px solid #333;
@@ -81,11 +84,13 @@ nav {
   font-size: 20px;
   cursor: pointer;
 }
-.referencias{
+
+.referencias {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .searchInput::placeholder {
   color: lightgray;
 }
@@ -104,10 +109,12 @@ nav {
 }
 
 .slider {
-  background-color: #369e62;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  background-image: url('./img/tetste.png');
+  background-repeat: no-repeat;
   overflow: hidden;
 }
+
+
 
 .sliderWrapper {
   display: flex;
@@ -116,23 +123,26 @@ nav {
 }
 
 .sliderItem {
+  margin: 10px;
   width: 100vw;
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
 }
 
 .sliderBg {
-  width: 750px;
-  height: 750px;
+  width: 550px;
+  height: 550px;
   border-radius: 50%;
   position: absolute;
 }
 
 .sliderImg {
-  z-index: 1;
+  margin-top: 0;
+  width: 80%;
+  height: 70%;
 }
+
 
 .sliderTitle {
   position: absolute;

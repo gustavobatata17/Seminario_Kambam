@@ -3,10 +3,10 @@ const menuItems = document.querySelectorAll(".menuItem");
 
 const products = [
   { title: "O que é o Kambam?", price: 119, colors: [{ code: "black", img: "./img/air.png" }, { code: "darkblue", img: "./img/air2.png" }] },
-  { title: "Air Jordan", price: 149, colors: [{ code: "lightgray", img: "./img/jordan.png" }, { code: "green", img: "./img/jordan2.png" }] },
-  { title: "Blazer", price: 109, colors: [{ code: "lightgray", img: "./img/blazer.png" }, { code: "green", img: "./img/blazer2.png" }] },
-  { title: "Crater", price: 129, colors: [{ code: "black", img: "./img/crater.png" }, { code: "lightgray", img: "./img/crater2.png" }] },
-  { title: "Hippie", price: 99, colors: [{ code: "gray", img: "./img/hippie.png" }, { code: "black", img: "./img/hippie2.png" }] }
+  { title: "Juaguar", price: 149, colors: [{ code: "lightgray", img: "./img/jordan.png" }, { code: "green", img: "./img/jordan2.png" }] },
+  { title: "Kambam", price: 109, colors: [{ code: "lightgray", img: "./img/blazer.png" }, { code: "green", img: "./img/blazer2.png" }] },
+  { title: "Pensamento lean", price: 129, colors: [{ code: "black", img: "./img/crater.png" }, { code: "lightgray", img: "./img/crater2.png" }] },
+  
 ];
 
 let chosenProduct = products[0];
@@ -69,7 +69,24 @@ function addItem(columnId) {
   newItem.addEventListener('click', () => {
     const nextColumn = getNextColumn(columnId);
     if (nextColumn) {
-      document.getElementById(nextColumn).querySelector('.item-container').appendChild(newItem);
+      // Cria uma cópia do item para adicionar à próxima coluna
+      const clonedItem = newItem.cloneNode(true);
+
+      // Adiciona o item clonado à próxima coluna
+      document.getElementById(nextColumn).querySelector('.item-container').appendChild(clonedItem);
+
+      // Remove o item da coluna atual
+      newItem.remove();
+
+      // Adiciona o evento de clique ao item clonado para movê-lo novamente
+      clonedItem.addEventListener('click', () => {
+        const nextNextColumn = getNextColumn(nextColumn);
+        if (nextNextColumn) {
+          const furtherClonedItem = clonedItem.cloneNode(true);
+          document.getElementById(nextNextColumn).querySelector('.item-container').appendChild(furtherClonedItem);
+          clonedItem.remove();
+        }
+      });
     }
   });
 }
